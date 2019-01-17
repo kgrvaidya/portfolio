@@ -1,0 +1,187 @@
+$primary-color : #444;
+$secondary-color : #123456;
+
+* {
+    top:0;
+    margin:0;
+}
+body {
+    color : #fff;
+    //display: block;
+    background-color : #444;
+    background : url("../../img/img1.jpg");
+    background-size : cover;
+    background-repeat : no-repeat;
+    //overflow: hidden;
+    font-family : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+
+    
+}
+
+
+
+main {
+    //display: block;
+    margin-top : 50px;
+    height : 100%;
+    //width : 95.2%;
+    //background : #444;
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+    .h1 {
+        padding: 8px;
+        background: rgba(lighten(#fff, $amount: 5),0.1);
+    }
+    h1 {
+        
+        font-size : 4rem;
+        font-weight : 400;
+        z-index: 3;
+        color : #fff;
+    }
+    h2,h3 {
+        font-size : 1.5rem;
+        font-weight : 300;
+        color : rgba(255, 255, 255, 0.678);
+
+        
+
+    }
+    
+}
+
+.projects {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  
+    img {
+      width: 100%;
+      height: 200px;
+      border: 3px #fff solid;
+  
+      &:hover {
+        opacity: 0.5;
+        border-color:$secondary-color;
+      }
+    }
+  }
+
+  .btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    &:hover {
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+    }
+  }
+  
+  .btn-dark {
+    @extend .btn;
+    background: darken($primary-color, 50);
+    color: #fff;
+  }
+  
+  .btn-light {
+    @extend .btn;
+    background: lighten($primary-color, 50);
+    color: #333;
+  }
+  
+  .disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  
+
+
+  .studies-n-exp {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+    "bioimage biodet exper"
+    "clg1 clg2 clg3";
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    padding: 5px;
+
+
+    
+
+    .exper {
+        grid-area: exper;
+        font-size: 1.5rem;}
+
+      .clg, .exper {
+        background: rgba(lighten(#fff, $amount: 5),0.1);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+        margin-bottom: 15px;
+        
+        .clg-1 {
+            grid-area: clg1;
+        }
+        .clg-2 {
+            grid-area: clg2;
+        }
+        .clg-3 {
+            grid-area: clg3;
+        }
+
+      }
+
+      .bio-imag {
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 25%;
+        border: $secondary-color 3px solid;
+    }
+    
+    .bio-det {
+            grid-area: biodet;
+            font-size: 1.5rem;
+            border-bottom: $secondary-color 5px solid;
+            margin-bottom: 15px;    
+        }
+  }
+  
+
+  footer {
+    //padding: 1rem;
+    background: darken($primary-color, 10);
+    margin-bottom: 0;
+    //color: set-text-color($primary-color);
+    height: 35px;
+    i {
+        padding: 5px;
+    }
+    
+  }
+
+  #foo {
+      margin-left : 20vw;
+  }
+
+  div {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+  }
+
+#sec {
+    color : $secondary-color;
+}
+
+#two-lines {
+    background : $secondary-color;
+    font-size: 2rem;
+    color:#fff;
+    font-weight: 400;
+    border: #fff 5px solid;
+    text-align: center;
+
+}
